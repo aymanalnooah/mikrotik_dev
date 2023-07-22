@@ -8,10 +8,10 @@ add address=71.18.1.236 comment="free fire" list=0TIKTOK
 
 #remove old
 
-remove [find address=157.240.227.61]
-remove [find address=157.240.227.1]
-remove [find address=34.104.35.84]
-remove [find address=219.93.26.46]
+remove [find address=157.240.227.61 list=0TIKTOK]
+remove [find address=157.240.227.1 list=0TIKTOK]
+remove [find address=34.104.35.84 list=0TIKTOK]
+remove [find address=219.93.26.46 list=0TIKTOK]
 
 
 
