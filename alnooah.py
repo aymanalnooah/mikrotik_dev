@@ -6,7 +6,7 @@ add address=202.81.112.209 list=0TIKTOK comment=free
 add address=71.18.1.229 comment="free fire" list=0TIKTOK
 add address=71.18.1.236 comment="free fire" list=0TIKTOK
 
-
+ 
 #remove old
 
 remove [find address=157.240.227.61 list=0TIKTOK]
