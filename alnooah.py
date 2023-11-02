@@ -43,6 +43,8 @@ add address=v77.tiktokcdn.com list=0TIKTOK
 add address=v58.tiktokcdn.com list=0TIKTOK
 add address=v16m.tiktokcdn.com list=0TIKTOK
 add address=g.whatsapp.net list=LAN2024
+add address=82.114.163.0/19 list=LAN2024
+
 set comment="" [find list="0TIKTOK" dynamic=no ]
 
 
