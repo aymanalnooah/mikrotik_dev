@@ -1,6 +1,6 @@
 /ip firewall address-list
 
-
+remove [find list=Whats-face dynamic=no ] ; 
 
 add address=connectivitycheck.gstatic.com list=Whats-face
 add address=msftconnecttest.com list=Whats-face
