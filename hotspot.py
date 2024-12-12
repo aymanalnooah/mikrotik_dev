@@ -1,9 +1,9 @@
 
 :delay 10 ;
 
-/ip firewall address-list
+/ip firewall address-list ; 
 
-remove [find list=Whats-face dynamic=no ] ; 
+remove [find where list="Whats-face" and dynamic=no ] ; 
 
 add address=connectivitycheck.gstatic.com list=Whats-face
 add address=msftconnecttest.com list=Whats-face
