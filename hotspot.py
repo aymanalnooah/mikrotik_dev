@@ -1,3 +1,6 @@
+
+:delay 10 ;
+
 /ip firewall address-list
 
 remove [find list=Whats-face dynamic=no ] ; 
