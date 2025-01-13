@@ -16,3 +16,5 @@ add address=quran.tv list=hotspot.alnooah
 add address=tvquran.com list=hotspot.alnooah
 add address=quran.tv list=tvquran.com
 add address=tvquran.com list=tvquran.com
+
+
