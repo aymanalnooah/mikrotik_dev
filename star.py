@@ -49,7 +49,7 @@ add list=yemen address=197.255.0.0/19
 add list=yemen address=197.255.64.0/19
 add list=yemen address=197.255.128.0/19
 add list=yemen address=197.255.192.0/19
-add list=yemen address=195.94.0.0/16
+add list=yemen address=195.94.15.0/24
 add list=yemen address=212.26.0.0/19
 
 /ip firewall address-list add list=yemen  address="updates.cdn-apple.com" ;
