@@ -26,7 +26,7 @@
  add list=yemen  address=145.224.125.0/24 ; 
  add list=yemen  address=145.224.127.0/24 ; 
  add list=yemen  address=157.167.77.0/24 ; 
- add list=yemen  address=185.11.124.0/22 ; 
+ add list=yemen  address=185.11.0.0/16 ; 
  add list=yemen  address=185.71.128.0/22 ; 
  add list=yemen  address=185.76.0.0/22 ; 
  add list=yemen  address=185.80.0.0/16 ; 
