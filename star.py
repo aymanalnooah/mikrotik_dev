@@ -21,4 +21,5 @@ if ($defaultRouteFound = true) do={
 }
 
 
- 
+  /ip firewall  address-list 
+ add list=yemen  address=185.11.8.0/24 ; 
