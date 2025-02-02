@@ -20,6 +20,11 @@ if ($defaultRouteFound = true) do={
 }
 }
 
+/ip firewall  address-list remove [find where  address="185.11.8.0/24" ] ; 
 
-  /ip firewall  address-list 
- add list=yemen  address=185.11.8.0/24 ; 
+  /ip firewall  address-list   add list=yemen  address=185.11.8.0/24 ; 
+
+                                  
+
+
+    
