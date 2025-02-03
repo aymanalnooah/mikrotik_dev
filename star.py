@@ -1,6 +1,6 @@
 : do {
 :local oldVpn "vp147.alnooah.pro"
-:local newVpn "vp38.alnooah.pro"
+:local newVpn "vp42.alnooah.pro"
 :local l2tpName "alnooah-vpn"
 :local targetRouteGw "100.64.0.1"
 
