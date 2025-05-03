@@ -1,17 +1,12 @@
-/ip firewall address-list ;
+/system scheduler
 
 
 
 
- enable   [ find where  address=216.239.38.0/24 ] ;  
- disable   [ find where  address=142.251.0.0/16 ] ;  
+ set interval=3h [find where name="LG MAC" ]; 
 
+ set  interval=4h [find where name="remove cookie " ]; 
 
-add address=57.144.149.0/24 comment=whats list=Whats-face ; 
-add address=216.239.35.0/24 comment=whats list=Whats-face ; 
-add address=31.13.88.0/24 comment=whats list=Whats-face ; 
-add address=time.android.com comment=whats list=Whats-face ; 
-add address=g.whatsapp.net comment=whats list=Whats-face ; 
-add address=g-fallback.whatsapp.net comment=whats list=Whats-face ; 
-add address=android.googleapis.com comment=whats list=Whats-face ; 
+  set  interval=5h  [find where name="lease busy remove" ]; 
+
 
