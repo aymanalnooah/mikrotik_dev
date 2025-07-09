@@ -1,10 +1,15 @@
 
 /ip firewall address-list ;
 
+ add list=yemen  address=youapp.you-tele.com ; 
 
+ add list=yemen  address=i.ibb.co ;  
 
+ add list=yemen  address=taiztel.yemoney.net ;   
 
- remove   [ find where  address=196.216.64.0/19 ] ;  
+ add list=yemen  address=yemenrobot.ye ;  
+
+ add list=yemen  address=yemenrobot.com.ye ;  
 
   add address=185.11.8.0/24 list=yemen ;  
 
