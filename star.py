@@ -15,6 +15,7 @@
 /ip firewall address-list add list=liveserver address=hi3out.fiberlive.live;
 /ip firewall address-list add list=liveserver address=uae.fiberlive.live;
 /ip firewall address-list add list=liveserver address=tv.fiberlive.live;
+/ip firewall address-list add list=liveserver address=live.fiber-tech.io;
 /ip firewall address-list add list=liveserver address=kora.fiberlive.live;
 /ip firewall address-list add list=liveserver address=10.10.10.10;
 /queue simple remove [find where comment="fiber_live"];
