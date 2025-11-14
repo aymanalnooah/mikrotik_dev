@@ -1,1 +1,12 @@
-
+/ip firewall  address-list   add list=game  address=litedev.sgp.hik-connect.com ; 
+/ip firewall  address-list 	 add list=game  address=8.214.27.0/24 ; 
+/ip firewall  address-list 	 add list=game  address=connect.com ; 
+/ip firewall  address-list 	 add list=game  address=104.18.39.0/24 ; 
+/ip firewall  address-list   add list=game  address=apiisgp.hik-connect.com ; 
+/ip firewall  address-list   add list=game  address=isgpstatic.hik-connect.com ;
+/ip firewall  address-list   add list=game  address=mdev.sgp.ezvizlife.com ;
+/ip firewall  address-list 	 add list=game  address=api.pyronixcloud.com ;
+/ip firewall  address-list 	 add list=game  address=appres.ys7.com ;
+/ip firewall  address-list   add list=game  address=8.222.217.132 ;
+/ip firewall  address-list   add list=game  address=dmss.dolynkcloud.com ; 
+/ip firewall  address-list   add list=game  address=dmss-web.dolynkcloud.com ; 
