@@ -132,3 +132,14 @@
 /ip firewall address-list add list=camera address=8.222.217.132 comment=CloudNode ;
 /ip firewall address-list add list=camera address=connect.com comment=Generic ;
 /ip firewall address-list add list=camera address=updates.cdn-apple.com comment=Apple ;
+/ip firewall address-list add list=camera address=omada.tplinkcloud.com comment=TPLink ;
+/ip firewall address-list add list=camera address=aps1-omada-cloud.tplinkcloud.com comment=TPLink ;
+/ip firewall address-list add list=camera address=ajcloud.net comment=Wansview_Group ;
+/ip firewall address-list add list=camera address=wansview.com comment=Wansview ;
+/ip firewall address-list add list=camera address=foscam.com comment=Foscam ;
+/ip firewall address-list add list=camera address=myfoscam.org comment=Foscam_DDNS ;
+/ip firewall address-list add list=camera address=escam.cn comment=Escam ;
+/ip firewall address-list add list=camera address=sricam.com comment=Sricam ;
+/ip firewall address-list add list=camera address=srihome.app comment=Sricam_SriHome ;
+/ip firewall address-list add list=camera address=nellyssecurity.com comment=Cloud_P2P_Generic ;
+
