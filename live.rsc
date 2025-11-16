@@ -73,29 +73,3 @@
     :put "Please check your internet connection";
 };
 
-
-
-/ip firewall mangle remove [find where comment="fiber_live"];
-/ip firewall mangle add action=mark-connection chain=forward comment=fiber_live new-connection-mark=liveserver_conn passthrough=yes src-address-list=liveserver place-before=0;
-/ip firewall mangle add action=mark-connection chain=forward comment=fiber_live dst-address-list=liveserver new-connection-mark=liveserver_conn passthrough=yes place-before=0;
-/ip firewall mangle add action=mark-packet chain=forward comment=fiber_live connection-mark=liveserver_conn new-packet-mark=liveserver_pkt passthrough=no place-before=0;
-/system scheduler remove [find  where name="fiber_live_limit"];
-/system scheduler add name=fiber_live_limit on-event="delay 3m; /queue simple add comment=fiber_live name=fiber_live packet-marks=liveserver_pkt queue=hotspot-default/hotspot-default target=\"\" place-before=*; /queue simple add comment=fiber_live name=fiber_live packet-marks=liveserver_pkt queue=hotspot-default/hotspot-default target=\"\";" policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon start-time=startup;
-/ip firewall address-list remove [find where dynamic=no  list=liveserver];
-/ip firewall address-list add list=liveserver address=yemen.fiberlive.live;
-/ip firewall address-list add list=liveserver address=higet.fiberlive.live;
-/ip firewall address-list add list=liveserver address=hi.fiberlive.live;
-/ip firewall address-list add list=liveserver address=serv219.fiberlive.live;
-/ip firewall address-list add list=liveserver address=serv217.fiberlive.live;
-/ip firewall address-list add list=liveserver address=hic.fiberlive.live;
-/ip firewall address-list add list=liveserver address=main.fiberlive.live;
-/ip firewall address-list add list=liveserver address=cup.fiberlive.live;
-/ip firewall address-list add list=liveserver address=hi3out.fiberlive.live;
-/ip firewall address-list add list=liveserver address=uae.fiberlive.live;
-/ip firewall address-list add list=liveserver address=tv.fiberlive.live;
-/ip firewall address-list add list=liveserver address=kora.fiberlive.live;
-/ip firewall address-list add list=liveserver address=10.10.10.10;
-/queue simple remove [find where comment="fiber_live"];
-/queue simple add comment=fiber_live name=fiber_live packet-marks=liveserver_pkt queue=hotspot-default/hotspot-default target="" place-before=*;
-
-
