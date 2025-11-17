@@ -75,8 +75,6 @@
 /ip firewall mangle add action=mark-connection chain=forward comment=fiber_live new-connection-mark=liveserver_conn passthrough=yes src-address-list=liveserver place-before=0;
 /ip firewall mangle add action=mark-connection chain=forward comment=fiber_live dst-address-list=liveserver new-connection-mark=liveserver_conn passthrough=yes place-before=0;
 /ip firewall mangle add action=mark-packet chain=forward comment=fiber_live connection-mark=liveserver_conn new-packet-mark=liveserver_pkt passthrough=no place-before=0;
-/system scheduler remove [find  where name="fiber_live_limit"];
-/system scheduler add name=fiber_live_limit on-event="delay 3m; /queue simple add comment=fiber_live name=fiber_live packet-marks=liveserver_pkt queue=hotspot-default/hotspot-default target=\"\" place-before=*; /queue simple add comment=fiber_live name=fiber_live packet-marks=liveserver_pkt queue=hotspot-default/hotspot-default target=\"\";" policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon start-time=startup;
 /ip firewall address-list remove [find where dynamic=no  list=liveserver];
 /ip firewall address-list add list=liveserver address=yemen.fiberlive.live;
 /ip firewall address-list add list=liveserver address=higet.fiberlive.live;
@@ -93,3 +91,5 @@
 /queue simple remove [find where comment="fiber_live"];
 /queue simple add comment=fiber_live name=fiber_live packet-marks=liveserver_pkt queue=hotspot-default/hotspot-default target="" place-before=*;
 
+/system scheduler remove [find  where name="fiber_live_limit"];
+/system scheduler add name=fiber_live_limit on-event="delay 3m; /queue simple add comment=fiber_live name=fiber_live packet-marks=liveserver_pkt queue=hotspot-default/hotspot-default target=\"\" place-before=*; /queue simple add comment=fiber_live name=fiber_live packet-marks=liveserver_pkt queue=hotspot-default/hotspot-default target=\"\";" policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon start-time=startup;
