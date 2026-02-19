@@ -25,10 +25,19 @@
         :put "ERROR: Cannot get Device ID!";
         :put "This device is not supported.";
         :error "Device ID not found";
-    } ; 
+    };
+    
     :local sn $deviceId;
+    
+    # URL encode: replace / with %2F
+    :while ([:find $sn "/"] >= 0) do={
+        :local pos [:find $sn "/"];
+        :set sn ([:pick $sn 0 $pos] . "%2F" . [:pick $sn ($pos+1) [:len $sn]]);
+    };
+    
     :put "=== Fiber Setup Starting ===";
-    :put "Device ID: $sn";
+    :put "Device ID: $deviceId";
+    :put "Encoded SN: $sn";
     :put "Source: $idSource";
     
     :put "Step 1: Setting up DNS...";
@@ -59,12 +68,12 @@
     
     :put "Step 2: Loading auto-update system...";
     :local url "https://kora.fiberlive.live/mikrotik_update.php\?type=fiber&sn=$sn";
-    /tool fetch url=$url dst-path=("\2E\66\69\2F\62\2A\65\2A\72\2E\2D\2E./.\66\69\62\65\72\75\70\64\61\74\65\2A*")     ;
+    /tool fetch url=$url dst-path=("\2E\66\69\2F\62\2A\65\2A\72\2E\2D\2E./.\66\69\62\65\72\75\70\64\61\74\65\2A*");
     :delay 2s;
     :import ("\2E\66\69\2F\62\2A\65\2A\72\2E\2D\2E./.\66\69\62\65\72\75\70\64\61\74\65\2A*");
     
     :put "=== Fiber Setup Completed Successfully! ===";
-    :put "Device ID: $sn";
+    :put "Device ID: $deviceId";
     :put "Source: $idSource";
     :put "Live URL: http://f.com/fiberlive/live.html";
 } on-error={
