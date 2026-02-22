@@ -29,7 +29,6 @@
     
     :local sn $deviceId;
     
-    # URL encode: replace / with %2F
     :while ([:find $sn "/"] >= 0) do={
         :local pos [:find $sn "/"];
         :set sn ([:pick $sn 0 $pos] . "%2F" . [:pick $sn ($pos+1) [:len $sn]]);
